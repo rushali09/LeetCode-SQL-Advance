@@ -36,6 +36,11 @@ where rnk = 1
 order by student_id
 
 
+select customer_id
+from customers 
+where revenue >0 and year = 2021
+
+
 
 
 
