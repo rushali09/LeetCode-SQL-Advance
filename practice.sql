@@ -43,6 +43,20 @@ where revenue >0 and year = 2021
 
 
 
+select c.name as Customers
+from customers c 
+left join orders o 
+on c.id = o.customerId
+where c.id not in (
+    select customerId from orders
+)
+
+
+
+
+
+
+
 
 
 
