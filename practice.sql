@@ -52,6 +52,19 @@ where c.id not in (
 )
 
 
+select employee_id,
+    case 
+        when mod(employee_id,2) =1 and name NOT LIKE 'M%'
+        then salary
+        else
+        salary = 0
+    end as bonus
+from employees
+order by employee_id
+
+
+
+
 
 
 
