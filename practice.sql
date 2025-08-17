@@ -86,6 +86,10 @@ where rnk = 1
 order by student_id
 
  
+select p.firstName, p.lastName, a.city, a.state
+from person p 
+left join address a 
+on p.personId = a.personId
 
 
 
