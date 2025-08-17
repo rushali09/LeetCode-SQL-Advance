@@ -63,9 +63,6 @@ from employees
 order by employee_id
 
 
-
-
-
 select c.customer_id, c.customer_name
 from customers c 
 left join orders o 
@@ -76,7 +73,19 @@ and sum(o.product_name = 'B') > 0
 and sum(o.product_name = 'C') = 0
 
 
+select student_id, 
+course_id,
+grade
+from
+(select  student_id,
+        course_id, 
+        grade,
+        row_number() over(partition by student_id order by grade desc, course_id asc) as rnk
+from enrollments) as temp
+where rnk = 1
+order by student_id
 
+ 
 
 
 
