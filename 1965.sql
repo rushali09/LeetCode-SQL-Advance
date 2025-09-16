@@ -18,3 +18,4 @@ right join salaries s
 on e.employee_id = s.employee_id
 where e.name is null
 order by employee_id
+--1965. Employees With Missing Information
