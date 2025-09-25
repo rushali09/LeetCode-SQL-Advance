@@ -8,6 +8,8 @@
 -- # same user_id, different IP, but overlap (login/logout) -> Red flag
 -- # They only get flagged when different IPs + overlapping login sessions happen.
 
+-- # Login: same account;different ip address; overlapping timings
+
 select distinct l1.account_id
 from loginfo l1
 inner join loginfo l2
