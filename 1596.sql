@@ -21,3 +21,5 @@ WHERE o.order_count = o.max_count;
 
 
 
+# -- There is no "ORDER BY" clause in the result set.
+# -- Each customer may have multiple products with the same highest order count.
